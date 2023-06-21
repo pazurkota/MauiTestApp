@@ -17,4 +17,14 @@ public partial class MainPage : ContentPage {
 
         SemanticScreenReader.Announce(CounterBtn.Text);
     }
+
+    private async void CheckInternetConnection(object sender, EventArgs e) {
+        var hasInternet = Connectivity.Current.NetworkAccess == NetworkAccess.Internet;
+        var internetType = Connectivity.Current.ConnectionProfiles.FirstOrDefault();
+
+        var content = hasInternet ? $"Status: Connected with type {internetType}" : "Status: Disconnected";
+
+        await Application.Current.MainPage.DisplayAlert("Internet", content,
+            "OK");
+    }
 }
