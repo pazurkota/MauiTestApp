@@ -40,6 +40,11 @@
                 Clicked="CheckInternetConnection"
                 HorizontalOptions="Center"
                 />
+            <Button 
+                Text="Generate BOBUX"
+                Clicked="GenerateBobux"
+                HorizontalOptions="Center"
+                />
 
         </VerticalStackLayout>
     </ScrollView>

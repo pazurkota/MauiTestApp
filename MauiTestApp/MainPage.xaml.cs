@@ -27,4 +27,8 @@ public partial class MainPage : ContentPage {
         await Application.Current.MainPage.DisplayAlert("Internet", content,
             "OK");
     }
+
+    private async void GenerateBobux(object sender, EventArgs e) {
+        await Application.Current.MainPage.DisplayAlert("Error", "No bobux for you my friend!", "Oh :(");
+    }
 }
